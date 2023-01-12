@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		656271D2296F4B69000B0AB5 /* EmployeeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36652967CED300D3C627 /* EmployeeServiceTests.swift */; };
+		656271D3296F4EC2000B0AB5 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB365A2967753900D3C627 /* EmployeeService.swift */; };
+		656271D4296F4EC7000B0AB5 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBEA6296912290061A521 /* EmployeeListViewModel.swift */; };
+		656271D5296F4ECD000B0AB5 /* EmployeeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB366F2967DA7500D3C627 /* EmployeeServiceMock.swift */; };
+		656271D6296F4ECD000B0AB5 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBEB3296E8FAC0061A521 /* URLSessionMock.swift */; };
+		656271D7296F4ECD000B0AB5 /* EmployeeMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36692967CFE700D3C627 /* EmployeeMocks.swift */; };
+		656271D8296F4ECD000B0AB5 /* MockAPIEmployeeResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 659BBEBD296EABE50061A521 /* MockAPIEmployeeResponseSuccess.json */; };
+		656271D9296F4ECD000B0AB5 /* MockAPIEmployeeResponseMalformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 65CB366C2967D2D100D3C627 /* MockAPIEmployeeResponseMalformed.json */; };
+		656271DA296F4ECD000B0AB5 /* MockAPIEmployeesResponseEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = 6592B566296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json */; };
+		656271DB296F4ED1000B0AB5 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36582967731D00D3C627 /* Employee.swift */; };
+		656271DC296F4EE7000B0AB5 /* EmployeeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36622967CD8400D3C627 /* EmployeeServiceProtocol.swift */; };
+		656271DD296F4F92000B0AB5 /* ConfigurationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB365E2967CC4800D3C627 /* ConfigurationEnum.swift */; };
+		656271E0296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656271DF296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift */; };
+		656271E1296F691C000B0AB5 /* URLSessionProtocol+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656271DF296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift */; };
+		656271E3296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */; };
+		656271E4296F6A9A000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */; };
+		6592B567296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = 6592B566296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json */; };
+		659BBEA7296912290061A521 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBEA6296912290061A521 /* EmployeeListViewModel.swift */; };
+		659BBEAD296E051A0061A521 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBEAC296E051A0061A521 /* LoadingView.swift */; };
+		659BBEB4296E8FAC0061A521 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBEB3296E8FAC0061A521 /* URLSessionMock.swift */; };
+		659BBEBE296EABE50061A521 /* MockAPIEmployeeResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 659BBEBD296EABE50061A521 /* MockAPIEmployeeResponseSuccess.json */; };
+		65CB364029676A9100D3C627 /* SquareProject2023App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB361829676A8F00D3C627 /* SquareProject2023App.swift */; };
+		65CB364429676A9100D3C627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65CB361A29676A9100D3C627 /* Assets.xcassets */; };
+		65CB36592967731D00D3C627 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36582967731D00D3C627 /* Employee.swift */; };
+		65CB365B2967753900D3C627 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB365A2967753900D3C627 /* EmployeeService.swift */; };
+		65CB365F2967CC4800D3C627 /* ConfigurationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB365E2967CC4800D3C627 /* ConfigurationEnum.swift */; };
+		65CB36632967CD8400D3C627 /* EmployeeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36622967CD8400D3C627 /* EmployeeServiceProtocol.swift */; };
+		65CB366A2967CFE700D3C627 /* EmployeeMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36692967CFE700D3C627 /* EmployeeMocks.swift */; };
+		65CB366D2967D2D100D3C627 /* MockAPIEmployeeResponseMalformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 65CB366C2967D2D100D3C627 /* MockAPIEmployeeResponseMalformed.json */; };
+		65CB36702967DA7500D3C627 /* EmployeeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB366F2967DA7500D3C627 /* EmployeeServiceMock.swift */; };
+		65CB36742967F49A00D3C627 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36732967F49A00D3C627 /* ListItem.swift */; };
+		65CB36772967FE7500D3C627 /* EmployeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB36762967FE7500D3C627 /* EmployeeListView.swift */; };
+		E5A97535D47CA69F70AB2290 /* Pods_SquareProject2023__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33EE3FBB517907AED720670 /* Pods_SquareProject2023__iOS_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		656271CD296F4B5F000B0AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65CB361329676A8F00D3C627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65CB361E29676A9100D3C627;
+			remoteInfo = "SquareProject2023 (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39E7F010C396B6919FF26496 /* Pods-Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests iOS.debug.xcconfig"; path = "Target Support Files/Pods-Tests iOS/Pods-Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		630F7DAF6DE68EE55A29E077 /* libPods-Tests iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		656271C9296F4B5F000B0AB5 /* SquareProject2023Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareProject2023Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		656271DF296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionProtocol+Mock.swift"; sourceTree = "<group>"; };
+		656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getJSONStringContents.swift"; sourceTree = "<group>"; };
+		6592B566296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockAPIEmployeesResponseEmpty.json; sourceTree = "<group>"; };
+		659BBEA6296912290061A521 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
+		659BBEAC296E051A0061A521 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		659BBEB3296E8FAC0061A521 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		659BBEBD296EABE50061A521 /* MockAPIEmployeeResponseSuccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockAPIEmployeeResponseSuccess.json; sourceTree = "<group>"; };
+		65CB361829676A8F00D3C627 /* SquareProject2023App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareProject2023App.swift; sourceTree = "<group>"; };
+		65CB361A29676A9100D3C627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65CB361F29676A9100D3C627 /* SquareProject2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareProject2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CB36582967731D00D3C627 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		65CB365A2967753900D3C627 /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
+		65CB365D2967CBA000D3C627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65CB365E2967CC4800D3C627 /* ConfigurationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationEnum.swift; sourceTree = "<group>"; };
+		65CB36612967CC9300D3C627 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		65CB36622967CD8400D3C627 /* EmployeeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeServiceProtocol.swift; sourceTree = "<group>"; };
+		65CB36652967CED300D3C627 /* EmployeeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeServiceTests.swift; sourceTree = "<group>"; };
+		65CB36692967CFE700D3C627 /* EmployeeMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeMocks.swift; sourceTree = "<group>"; };
+		65CB366C2967D2D100D3C627 /* MockAPIEmployeeResponseMalformed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAPIEmployeeResponseMalformed.json; sourceTree = "<group>"; };
+		65CB366F2967DA7500D3C627 /* EmployeeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeServiceMock.swift; sourceTree = "<group>"; };
+		65CB36732967F49A00D3C627 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		65CB36762967FE7500D3C627 /* EmployeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListView.swift; sourceTree = "<group>"; };
+		90CBC78F69B2F03361245EE2 /* Pods-SquareProject2023 (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareProject2023 (iOS).release.xcconfig"; path = "Target Support Files/Pods-SquareProject2023 (iOS)/Pods-SquareProject2023 (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		99CFD234849143DF1E52346B /* Pods-Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests iOS.release.xcconfig"; path = "Target Support Files/Pods-Tests iOS/Pods-Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E21A2A5D07D5266464CB3800 /* Pods-SquareProject2023 (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareProject2023 (iOS).debug.xcconfig"; path = "Target Support Files/Pods-SquareProject2023 (iOS)/Pods-SquareProject2023 (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		E33EE3FBB517907AED720670 /* Pods_SquareProject2023__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquareProject2023__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		656271C6296F4B5F000B0AB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65CB361C29676A9100D3C627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5A97535D47CA69F70AB2290 /* Pods_SquareProject2023__iOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		343414C3D60C24C3EF1F6F71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E33EE3FBB517907AED720670 /* Pods_SquareProject2023__iOS_.framework */,
+				630F7DAF6DE68EE55A29E077 /* libPods-Tests iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		656271CA296F4B5F000B0AB5 /* SquareProject2023Tests */ = {
+			isa = PBXGroup;
+			children = (
+				65CB36652967CED300D3C627 /* EmployeeServiceTests.swift */,
+			);
+			path = SquareProject2023Tests;
+			sourceTree = "<group>";
+		};
+		656271DE296F6669000B0AB5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				656271DF296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift */,
+				656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		659BBEA52969120F0061A521 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				659BBEA6296912290061A521 /* EmployeeListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		65CB361229676A8F00D3C627 = {
+			isa = PBXGroup;
+			children = (
+				65CB36612967CC9300D3C627 /* Release.xcconfig */,
+				65CB365D2967CBA000D3C627 /* Info.plist */,
+				65CB361729676A8F00D3C627 /* Shared */,
+				656271CA296F4B5F000B0AB5 /* SquareProject2023Tests */,
+				65CB362029676A9100D3C627 /* Products */,
+				FF6B9D3A780CE7FB47DEB6B4 /* Pods */,
+				343414C3D60C24C3EF1F6F71 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		65CB361729676A8F00D3C627 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				656271DE296F6669000B0AB5 /* Extensions */,
+				659BBEA52969120F0061A521 /* ViewModels */,
+				65CB36722967F48D00D3C627 /* Components */,
+				65CB36682967CFD300D3C627 /* Mocks */,
+				65CB3657296772C300D3C627 /* Models */,
+				65CB365629676C2500D3C627 /* Services */,
+				65CB365529676C2100D3C627 /* Views */,
+				65CB365429676C1600D3C627 /* Protocols */,
+				65CB361829676A8F00D3C627 /* SquareProject2023App.swift */,
+				65CB361A29676A9100D3C627 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		65CB362029676A9100D3C627 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65CB361F29676A9100D3C627 /* SquareProject2023.app */,
+				656271C9296F4B5F000B0AB5 /* SquareProject2023Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65CB365429676C1600D3C627 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				65CB36622967CD8400D3C627 /* EmployeeServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		65CB365529676C2100D3C627 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65CB36762967FE7500D3C627 /* EmployeeListView.swift */,
+				659BBEAC296E051A0061A521 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65CB365629676C2500D3C627 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				65CB365A2967753900D3C627 /* EmployeeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		65CB3657296772C300D3C627 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65CB36582967731D00D3C627 /* Employee.swift */,
+				65CB365E2967CC4800D3C627 /* ConfigurationEnum.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65CB36682967CFD300D3C627 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				65CB36692967CFE700D3C627 /* EmployeeMocks.swift */,
+				65CB366C2967D2D100D3C627 /* MockAPIEmployeeResponseMalformed.json */,
+				6592B566296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json */,
+				659BBEBD296EABE50061A521 /* MockAPIEmployeeResponseSuccess.json */,
+				65CB366F2967DA7500D3C627 /* EmployeeServiceMock.swift */,
+				659BBEB3296E8FAC0061A521 /* URLSessionMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		65CB36722967F48D00D3C627 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				65CB36732967F49A00D3C627 /* ListItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FF6B9D3A780CE7FB47DEB6B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E21A2A5D07D5266464CB3800 /* Pods-SquareProject2023 (iOS).debug.xcconfig */,
+				90CBC78F69B2F03361245EE2 /* Pods-SquareProject2023 (iOS).release.xcconfig */,
+				39E7F010C396B6919FF26496 /* Pods-Tests iOS.debug.xcconfig */,
+				99CFD234849143DF1E52346B /* Pods-Tests iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		656271C8296F4B5F000B0AB5 /* SquareProject2023Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 656271CF296F4B5F000B0AB5 /* Build configuration list for PBXNativeTarget "SquareProject2023Tests" */;
+			buildPhases = (
+				656271C5296F4B5F000B0AB5 /* Sources */,
+				656271C6296F4B5F000B0AB5 /* Frameworks */,
+				656271C7296F4B5F000B0AB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				656271CE296F4B5F000B0AB5 /* PBXTargetDependency */,
+			);
+			name = SquareProject2023Tests;
+			productName = SquareProject2023Tests;
+			productReference = 656271C9296F4B5F000B0AB5 /* SquareProject2023Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65CB361E29676A9100D3C627 /* SquareProject2023 (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65CB364829676A9100D3C627 /* Build configuration list for PBXNativeTarget "SquareProject2023 (iOS)" */;
+			buildPhases = (
+				7E84563ADD29041EFE0DDE40 /* [CP] Check Pods Manifest.lock */,
+				65CB361B29676A9100D3C627 /* Sources */,
+				65CB361C29676A9100D3C627 /* Frameworks */,
+				65CB361D29676A9100D3C627 /* Resources */,
+				8BEACA505DA4E40E6648B48D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SquareProject2023 (iOS)";
+			productName = "SquareProject2023 (iOS)";
+			productReference = 65CB361F29676A9100D3C627 /* SquareProject2023.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65CB361329676A8F00D3C627 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					656271C8296F4B5F000B0AB5 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 65CB361E29676A9100D3C627;
+					};
+					65CB361E29676A9100D3C627 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 65CB361629676A8F00D3C627 /* Build configuration list for PBXProject "SquareProject2023" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65CB361229676A8F00D3C627;
+			productRefGroup = 65CB362029676A9100D3C627 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65CB361E29676A9100D3C627 /* SquareProject2023 (iOS) */,
+				656271C8296F4B5F000B0AB5 /* SquareProject2023Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		656271C7296F4B5F000B0AB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				656271D8296F4ECD000B0AB5 /* MockAPIEmployeeResponseSuccess.json in Resources */,
+				656271DA296F4ECD000B0AB5 /* MockAPIEmployeesResponseEmpty.json in Resources */,
+				656271D9296F4ECD000B0AB5 /* MockAPIEmployeeResponseMalformed.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65CB361D29676A9100D3C627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6592B567296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json in Resources */,
+				65CB364429676A9100D3C627 /* Assets.xcassets in Resources */,
+				659BBEBE296EABE50061A521 /* MockAPIEmployeeResponseSuccess.json in Resources */,
+				65CB366D2967D2D100D3C627 /* MockAPIEmployeeResponseMalformed.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E84563ADD29041EFE0DDE40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SquareProject2023 (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BEACA505DA4E40E6648B48D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquareProject2023 (iOS)/Pods-SquareProject2023 (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquareProject2023 (iOS)/Pods-SquareProject2023 (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SquareProject2023 (iOS)/Pods-SquareProject2023 (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		656271C5296F4B5F000B0AB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				656271D7296F4ECD000B0AB5 /* EmployeeMocks.swift in Sources */,
+				656271DC296F4EE7000B0AB5 /* EmployeeServiceProtocol.swift in Sources */,
+				656271DB296F4ED1000B0AB5 /* Employee.swift in Sources */,
+				656271E4296F6A9A000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */,
+				656271D6296F4ECD000B0AB5 /* URLSessionMock.swift in Sources */,
+				656271E1296F691C000B0AB5 /* URLSessionProtocol+Mock.swift in Sources */,
+				656271DD296F4F92000B0AB5 /* ConfigurationEnum.swift in Sources */,
+				656271D5296F4ECD000B0AB5 /* EmployeeServiceMock.swift in Sources */,
+				656271D3296F4EC2000B0AB5 /* EmployeeService.swift in Sources */,
+				656271D4296F4EC7000B0AB5 /* EmployeeListViewModel.swift in Sources */,
+				656271D2296F4B69000B0AB5 /* EmployeeServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65CB361B29676A9100D3C627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65CB366A2967CFE700D3C627 /* EmployeeMocks.swift in Sources */,
+				659BBEA7296912290061A521 /* EmployeeListViewModel.swift in Sources */,
+				65CB365F2967CC4800D3C627 /* ConfigurationEnum.swift in Sources */,
+				656271E3296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */,
+				65CB36632967CD8400D3C627 /* EmployeeServiceProtocol.swift in Sources */,
+				65CB36742967F49A00D3C627 /* ListItem.swift in Sources */,
+				659BBEAD296E051A0061A521 /* LoadingView.swift in Sources */,
+				659BBEB4296E8FAC0061A521 /* URLSessionMock.swift in Sources */,
+				65CB365B2967753900D3C627 /* EmployeeService.swift in Sources */,
+				65CB36772967FE7500D3C627 /* EmployeeListView.swift in Sources */,
+				65CB36592967731D00D3C627 /* Employee.swift in Sources */,
+				65CB364029676A9100D3C627 /* SquareProject2023App.swift in Sources */,
+				65CB36702967DA7500D3C627 /* EmployeeServiceMock.swift in Sources */,
+				656271E0296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		656271CE296F4B5F000B0AB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65CB361E29676A9100D3C627 /* SquareProject2023 (iOS) */;
+			targetProxy = 656271CD296F4B5F000B0AB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		656271D0296F4B5F000B0AB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kager.SquareProject2023Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquareProject2023.app/SquareProject2023";
+			};
+			name = Debug;
+		};
+		656271D1296F4B5F000B0AB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kager.SquareProject2023Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquareProject2023.app/SquareProject2023";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65CB364629676A9100D3C627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CB36612967CC9300D3C627 /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		65CB364729676A9100D3C627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CB36612967CC9300D3C627 /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		65CB364929676A9100D3C627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21A2A5D07D5266464CB3800 /* Pods-SquareProject2023 (iOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kager.SquareProject2023;
+				PRODUCT_NAME = SquareProject2023;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65CB364A29676A9100D3C627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90CBC78F69B2F03361245EE2 /* Pods-SquareProject2023 (iOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kager.SquareProject2023;
+				PRODUCT_NAME = SquareProject2023;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		656271CF296F4B5F000B0AB5 /* Build configuration list for PBXNativeTarget "SquareProject2023Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				656271D0296F4B5F000B0AB5 /* Debug */,
+				656271D1296F4B5F000B0AB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65CB361629676A8F00D3C627 /* Build configuration list for PBXProject "SquareProject2023" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65CB364629676A9100D3C627 /* Debug */,
+				65CB364729676A9100D3C627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65CB364829676A9100D3C627 /* Build configuration list for PBXNativeTarget "SquareProject2023 (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65CB364929676A9100D3C627 /* Debug */,
+				65CB364A29676A9100D3C627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65CB361329676A8F00D3C627 /* Project object */;
+}

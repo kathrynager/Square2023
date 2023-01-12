@@ -1,0 +1,6 @@
+framework module Pods_SquareProject2023__iOS_ {
+  umbrella header "Pods-SquareProject2023 (iOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}

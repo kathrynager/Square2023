@@ -1,0 +1,11 @@
+//
+//  Release.xcconfig
+//  SquareProject2023
+//
+//  Created by Kathryn Ager on 1/5/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SQUARE_API_URL = s3.amazonaws.com/sq-mobile-interview
