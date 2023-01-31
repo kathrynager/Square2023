@@ -13,6 +13,9 @@ import Kingfisher
  If no photo is provided a placeholder will be displayed.
  */
 struct ListItem: View {
+    struct Constants {
+        static let size = 50.0
+    }
     
     // MARK: - Properties
     
@@ -21,36 +24,10 @@ struct ListItem: View {
     var photoUrl: String? = nil
     
     // MARK: - Views
-    
-    var placeholderImage: some View {
-        Image("PlaceholderImage")
-            .resizable()
-            .aspectRatio(1, contentMode: .fit)
-            .frame(width: 50, height: 50)
-    }
-    
-    /// Displays image from url and checks cache or shows placeholder image
-    var photoView: some View {
-        Group {
-            if let photoUrl = photoUrl, let url = URL(string: photoUrl){
-                KFImage(url)
-                    .placeholder {
-                        placeholderImage
-                    }
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 50, height: 50)
-                    .clipped()
-            }
-            else {
-                placeholderImage
-            }
-        }
-    }
-    
+
     var body: some View {
         HStack {
-            photoView
+            ImageView(photoUrl: photoUrl, size: Constants.size)
                 .padding([.trailing], 8)
             VStack(alignment: .leading) {
                 Text(title)

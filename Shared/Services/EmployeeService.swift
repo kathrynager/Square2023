@@ -18,13 +18,18 @@ class EmployeeService: EmployeeServiceProtocol {
     
     // MARK: - Properties
     
+    private var previousResponse: EmployeeResponse? = nil
+    private var didReadCache: Bool = false
+    
     private let url: String /// URL required to fetch from
     private let session: URLSessionProtocol
     private let logger = Logger()
+    private let persistanceManger: PersistanceManger
     
-    init(url: String, urlSession: URLSessionProtocol = URLSession.shared) {
+    init(url: String, urlSession: URLSessionProtocol = URLSession.shared, persistanceManger: PersistanceManger) {
         self.url = url
         self.session = urlSession
+        self.persistanceManger = persistanceManger
     }
     
     // MARK: - Functions
@@ -34,7 +39,25 @@ class EmployeeService: EmployeeServiceProtocol {
      */
     func getEmployees() async -> Result<EmployeeResponse, EmployeeResponseError> {
         do {
-            let response: EmployeeResponse = try await fetch(endpoint: Constants.employeeEndpoint)
+            var response: EmployeeResponse
+            // First try
+            
+            if previousResponse == nil, let readResponse = persistanceManger.read() {
+                response = readResponse
+                didReadCache = true
+            } else {
+                response = try await fetch(endpoint: Constants.employeeEndpoint)
+            }
+
+            // Check if response is diff
+            // Save
+            if didReadCache == false && previousResponse != response {
+                persistanceManger.save(employees: response)
+                didReadCache = false
+            }
+            
+            previousResponse = response
+            
             return .success(response)
         } catch EmployeeResponseError.invalidUrl {
             return .failure(EmployeeResponseError.invalidUrl)

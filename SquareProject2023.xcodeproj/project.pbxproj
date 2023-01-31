@@ -23,6 +23,16 @@
 		656271E1296F691C000B0AB5 /* URLSessionProtocol+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656271DF296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift */; };
 		656271E3296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */; };
 		656271E4296F6A9A000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */; };
+		657A929A2989ADD30067414B /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A92992989ADD30067414B /* PersistanceManager.swift */; };
+		657A929B2989ADD30067414B /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A92992989ADD30067414B /* PersistanceManager.swift */; };
+		657A929D2989BA090067414B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A929C2989BA090067414B /* DetailView.swift */; };
+		657A929E2989BA090067414B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A929C2989BA090067414B /* DetailView.swift */; };
+		657A92A02989BACE0067414B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A929F2989BACE0067414B /* ImageView.swift */; };
+		657A92A12989BACE0067414B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A929F2989BACE0067414B /* ImageView.swift */; };
+		657A92A32989BCF60067414B /* Employee+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A92A22989BCF60067414B /* Employee+Formatters.swift */; };
+		657A92A42989BCF60067414B /* Employee+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A92A22989BCF60067414B /* Employee+Formatters.swift */; };
+		657A92A62989BE820067414B /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A92A52989BE820067414B /* LineItem.swift */; };
+		657A92A72989BE820067414B /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A92A52989BE820067414B /* LineItem.swift */; };
 		6592B567296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = 6592B566296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json */; };
 		659BBEA7296912290061A521 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBEA6296912290061A521 /* EmployeeListViewModel.swift */; };
 		659BBEAD296E051A0061A521 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BBEAC296E051A0061A521 /* LoadingView.swift */; };
@@ -58,6 +68,11 @@
 		656271C9296F4B5F000B0AB5 /* SquareProject2023Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareProject2023Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		656271DF296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionProtocol+Mock.swift"; sourceTree = "<group>"; };
 		656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getJSONStringContents.swift"; sourceTree = "<group>"; };
+		657A92992989ADD30067414B /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		657A929C2989BA090067414B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		657A929F2989BACE0067414B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		657A92A22989BCF60067414B /* Employee+Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+Formatters.swift"; sourceTree = "<group>"; };
+		657A92A52989BE820067414B /* LineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
 		6592B566296EBF16000ABE42 /* MockAPIEmployeesResponseEmpty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockAPIEmployeesResponseEmpty.json; sourceTree = "<group>"; };
 		659BBEA6296912290061A521 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
 		659BBEAC296E051A0061A521 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -125,6 +140,7 @@
 			children = (
 				656271DF296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift */,
 				656271E2296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift */,
+				657A92A22989BCF60067414B /* Employee+Formatters.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +205,7 @@
 			children = (
 				65CB36762967FE7500D3C627 /* EmployeeListView.swift */,
 				659BBEAC296E051A0061A521 /* LoadingView.swift */,
+				657A929C2989BA090067414B /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				65CB365A2967753900D3C627 /* EmployeeService.swift */,
+				657A92992989ADD30067414B /* PersistanceManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -227,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				65CB36732967F49A00D3C627 /* ListItem.swift */,
+				657A929F2989BACE0067414B /* ImageView.swift */,
+				657A92A52989BE820067414B /* LineItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -391,16 +411,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657A92A72989BE820067414B /* LineItem.swift in Sources */,
 				656271D7296F4ECD000B0AB5 /* EmployeeMocks.swift in Sources */,
 				656271DC296F4EE7000B0AB5 /* EmployeeServiceProtocol.swift in Sources */,
 				656271DB296F4ED1000B0AB5 /* Employee.swift in Sources */,
+				657A929B2989ADD30067414B /* PersistanceManager.swift in Sources */,
+				657A92A42989BCF60067414B /* Employee+Formatters.swift in Sources */,
 				656271E4296F6A9A000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */,
 				656271D6296F4ECD000B0AB5 /* URLSessionMock.swift in Sources */,
 				656271E1296F691C000B0AB5 /* URLSessionProtocol+Mock.swift in Sources */,
+				657A929E2989BA090067414B /* DetailView.swift in Sources */,
 				656271DD296F4F92000B0AB5 /* ConfigurationEnum.swift in Sources */,
 				656271D5296F4ECD000B0AB5 /* EmployeeServiceMock.swift in Sources */,
 				656271D3296F4EC2000B0AB5 /* EmployeeService.swift in Sources */,
 				656271D4296F4EC7000B0AB5 /* EmployeeListViewModel.swift in Sources */,
+				657A92A12989BACE0067414B /* ImageView.swift in Sources */,
 				656271D2296F4B69000B0AB5 /* EmployeeServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,19 +434,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657A929A2989ADD30067414B /* PersistanceManager.swift in Sources */,
 				65CB366A2967CFE700D3C627 /* EmployeeMocks.swift in Sources */,
 				659BBEA7296912290061A521 /* EmployeeListViewModel.swift in Sources */,
+				657A92A02989BACE0067414B /* ImageView.swift in Sources */,
 				65CB365F2967CC4800D3C627 /* ConfigurationEnum.swift in Sources */,
 				656271E3296F6A65000B0AB5 /* Bundle+getJSONStringContents.swift in Sources */,
 				65CB36632967CD8400D3C627 /* EmployeeServiceProtocol.swift in Sources */,
 				65CB36742967F49A00D3C627 /* ListItem.swift in Sources */,
 				659BBEAD296E051A0061A521 /* LoadingView.swift in Sources */,
 				659BBEB4296E8FAC0061A521 /* URLSessionMock.swift in Sources */,
+				657A929D2989BA090067414B /* DetailView.swift in Sources */,
 				65CB365B2967753900D3C627 /* EmployeeService.swift in Sources */,
 				65CB36772967FE7500D3C627 /* EmployeeListView.swift in Sources */,
 				65CB36592967731D00D3C627 /* Employee.swift in Sources */,
 				65CB364029676A9100D3C627 /* SquareProject2023App.swift in Sources */,
+				657A92A62989BE820067414B /* LineItem.swift in Sources */,
 				65CB36702967DA7500D3C627 /* EmployeeServiceMock.swift in Sources */,
+				657A92A32989BCF60067414B /* Employee+Formatters.swift in Sources */,
 				656271E0296F66AB000B0AB5 /* URLSessionProtocol+Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

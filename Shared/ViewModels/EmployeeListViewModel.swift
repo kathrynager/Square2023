@@ -28,24 +28,23 @@ import Foundation
     // MARK: - Functions
     
     /// Calls employeeService to fetch employees. Returns an empty list if nil
-    func getEmployees() {
+    func getEmployees() async {
         /// Don't fetch if a fetch is already in progress
         if isLoading {
             return
         }
         didError = false
         isLoading = true
-        Task {
-            let result = await employeeService.getEmployees()
-            switch(result) {
-            case .success(let data):
-                /// Sort by full name
-                employees = data.employees.sorted(by: { $0.fullName < $1.fullName})
-            case .failure(_):
-                employees = []
-                didError = true
-            }
-            isLoading = false
+        let result = await employeeService.getEmployees()
+        switch(result) {
+        case .success(let data):
+            /// Sort by full name
+            employees = data.employees.sorted(by: { $0.fullName < $1.fullName})
+        case .failure(_):
+            employees = []
+            didError = true
         }
+        isLoading = false
+        
     }
 }

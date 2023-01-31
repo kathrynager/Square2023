@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct EmployeeResponse: Codable {
+struct EmployeeResponse: Codable, Equatable {
     var employees: [Employee]
 }
 
-struct Employee: Codable, Identifiable {
+struct Employee: Codable, Identifiable, Equatable {
     var id: String { return uuid }
     
     var emailAddress: String
