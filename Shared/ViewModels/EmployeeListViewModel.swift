@@ -18,6 +18,7 @@ import Foundation
     @Published var employees: [Employee] = [] /// Employee list to display
     @Published var didError: Bool = false /// Bool if fetch failed to display error state
     @Published var isLoading: Bool = false /// Bool to tell if api is loading
+    @Published var isFirstLoad: Bool = true
     
     private let employeeService: EmployeeServiceProtocol /// EmployeeService responsible for fetching the data
     
@@ -44,7 +45,9 @@ import Foundation
             employees = []
             didError = true
         }
+        if isFirstLoad {
+            isFirstLoad = false
+        }
         isLoading = false
-        
     }
 }

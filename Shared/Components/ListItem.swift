@@ -15,6 +15,7 @@ import Kingfisher
 struct ListItem: View {
     struct Constants {
         static let size = 50.0
+        static let padding = 8.0
     }
     
     // MARK: - Properties
@@ -27,17 +28,17 @@ struct ListItem: View {
 
     var body: some View {
         HStack {
-            ImageView(photoUrl: photoUrl, size: Constants.size)
-                .padding([.trailing], 8)
-            VStack(alignment: .leading) {
+            ImageView(photoUrl: photoUrl, assetPhotoName: AssetEnum.placeholder, size: Constants.size)
+                .padding([.trailing], Constants.padding)
+            VStack(alignment: .leading, spacing: Constants.padding) {
                 Text(title)
                 Text(subTitle)
                     .font(.caption)
             }
             Spacer()
         }
-        .frame(height: 50, alignment: .leading)
-        .padding([.top, .bottom], 8)
+        .frame(alignment: .leading)
+        .padding([.top, .bottom], Constants.padding)
     }
 }
 

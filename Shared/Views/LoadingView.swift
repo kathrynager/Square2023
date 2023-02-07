@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct LoadingView: View {
+    struct Constants {
+        static let scaleEffect = 1.3
+    }
     var label: String
     
     var body: some View {
         VStack {
             ProgressView()
-                .scaleEffect(1.3)
+                .scaleEffect(Constants.scaleEffect)
                 .padding()
             Text(label)
                 .font(.title)

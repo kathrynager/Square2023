@@ -13,33 +13,37 @@ class PersistanceManger {
         static let employeeFile = "employeeData.txt"
     }
     private let logger = Logger()
-
+    
     init(){}
-
+    
     var filename: URL {
         getDocumentsDirectory().appendingPathComponent(Constants.employeeFile)
     }
     
+    /**
+     Saves given data to file
+     */
     func save(employees: EmployeeResponse) {
         do {
-            var jsonString = try encode(employees)
-            
-            try jsonString.write(to: filename)
+            try encode(employees).write(to: filename)
         } catch {
-            logger.error("Failed to read from \(self.filename)")
+            logger.error("Error writing to \(self.filename)")
         }
     }
-    
+    /**
+     Reads data from file to return
+     */
     func read() -> EmployeeResponse? {
         do {
             let data = try Data(contentsOf: filename)
-            return try decode(data)
+            let decoded: EmployeeResponse = try decode(data)
+            return decoded
         } catch {
             logger.error("Error reading from \(self.filename)")
+            return nil
         }
-        return nil
     }
-    
+
     private func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
@@ -48,8 +52,7 @@ class PersistanceManger {
     private func encode(_ data: EmployeeResponse) throws -> Data {
         guard let encoded = try? JSONEncoder().encode(data) else {
             logger.error("Error encoding")
-            // TODO: udpate error
-            throw EmployeeResponseError.decode
+            throw PersistanceManagerError.encode
         }
         
         return encoded
@@ -60,8 +63,7 @@ class PersistanceManger {
         
         guard let decoded = try? decoder.decode(T.self, from: data) else {
             logger.error("Error decoding")
-            // TODO: udpate error
-            throw EmployeeResponseError.decode
+            throw PersistanceManagerError.decode
         }
         return decoded
     }

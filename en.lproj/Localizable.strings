@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  SquareProject2023
+
+  Created by Kathryn Ager on 2/6/23.
+  
+  NOTE: In larger app can organize by page and then alphabatize
+*/
+
+"Biography" = "Biography";
+"Contractor" = "Contractor";
+"Email" = "E-mail";
+"Full Time" = "Full Time";
+"Loading" = "Loading";
+"No Employees to Display" = "No Employees to Display";
+"Oops" = "Oops!";
+"Part Time" = "Part Time";
+"Phone" = "Phone";
+"Pull to try again" = "Pull down to try again!";
+"Team" = "Team";
+"Type" = "Type";
+
+

@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  SquareProject2023
+
+  Created by Kathryn Ager on 2/6/23.
+  
+*/
+
+"Biography" = "Biografía";
+"Contractor" = "Contratista";
+"Email" = "E-mail";
+"Phone" = "Teléfono";
+"Full Time" = "Tiempo Completo";
+"Loading" = "Cargando";
+"No Employees to Display" = "No Employees to Display";
+"Oops" = "Oops!";
+"Part Time" = "Medio Tiempo";
+"Pull to try again" = "Tirar hacia abajo para intentarlo de nuevo!";
+"Team" = "Equipo";
+"Type" = "Tipo";
+

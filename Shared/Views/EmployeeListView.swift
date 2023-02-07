@@ -21,27 +21,31 @@ struct EmployeeListView: View {
     var body: some View {
         NavigationStack {
             Group {
-                if viewModel.isLoading {
-                    LoadingView(label: "Loading...")
+                if viewModel.isFirstLoad {
+                    LoadingView(label: LocalizableKey.loading.localized())
                 } else {
                     List(viewModel.employees) { employee in
                         NavigationLink(destination: DetailView(employee: employee)) {
                             ListItem(title: employee.fullName, subTitle: employee.team, photoUrl: employee.photoUrlSmall)
                                 .progressViewStyle(.linear)
+                                .buttonStyle(.plain)
                         }
+                        .buttonStyle(.plain)
+                        .listRowSeparator(.hidden)
                     }
+                    .buttonStyle(.plain)
                     .refreshable {
                         await viewModel.getEmployees()
                     }
                     .overlay {
                         if viewModel.didError {
                             VStack {
-                                Text("Oops!")
-                                Text("Pull down to try again!")
+                                Text(LocalizableKey.oops.localized())
+                                Text(LocalizableKey.pullToTryAgain.localized())
                             }
                             .font(.title)
-                        } else if viewModel.employees.count == 0 {
-                            Text("No Employees to Display")
+                        } else if viewModel.employees.isEmpty {
+                            Text(LocalizableKey.noEmployeesToDisplay.localized())
                                 .font(.title)
                         }
                     }

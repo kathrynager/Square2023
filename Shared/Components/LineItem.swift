@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct LineItem: View {
+
     let label: String
     let value: String
     
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
-            Text("\(label): ")
-                .bold()
+            Label(value: label)
             Text(value)
-                
             Spacer()
         }
-        .padding(.bottom)
     }
 }
 

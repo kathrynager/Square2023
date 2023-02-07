@@ -20,7 +20,6 @@ class EmployeeService: EmployeeServiceProtocol {
     
     private var previousResponse: EmployeeResponse? = nil
     private var didReadCache: Bool = false
-    
     private let url: String /// URL required to fetch from
     private let session: URLSessionProtocol
     private let logger = Logger()
@@ -41,7 +40,6 @@ class EmployeeService: EmployeeServiceProtocol {
         do {
             var response: EmployeeResponse
             // First try
-            
             if previousResponse == nil, let readResponse = persistanceManger.read() {
                 response = readResponse
                 didReadCache = true
@@ -49,8 +47,7 @@ class EmployeeService: EmployeeServiceProtocol {
                 response = try await fetch(endpoint: Constants.employeeEndpoint)
             }
 
-            // Check if response is diff
-            // Save
+            // Check if response is diff and save
             if didReadCache == false && previousResponse != response {
                 persistanceManger.save(employees: response)
                 didReadCache = false

@@ -9,20 +9,24 @@ import Foundation
 
 extension Employee {
     
+    struct Constants {
+        static let placeholderText = "--"
+    }
+        
     var employeeTypeFormatted: String {
         switch(employeeType) {
         case .contractor:
-            return "Contractor"
+            return LocalizableKey.contractor.localized()
         case .fullTime:
-            return "Full Time"
+            return LocalizableKey.fullTime.localized()
         case .partTime:
-            return "Part Time"
+            return LocalizableKey.partTime.localized()
         }
     }
     
     var phoneNumberFormatted: String {
         guard let phoneNumber = phoneNumber else {
-            return "N/A"
+            return Constants.placeholderText
         }
         var phone = "("
         for (i, num) in phoneNumber.enumerated() {
@@ -34,7 +38,13 @@ extension Employee {
             }
             phone.append(num)
         }
-        
         return phone
+    }
+    
+    var biographyFormatted: String {
+        guard let biography = biography else {
+            return Constants.placeholderText
+        }
+        return biography
     }
 }

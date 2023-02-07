@@ -31,10 +31,3 @@ enum EmployeeType: String, Codable {
     case fullTime = "FULL_TIME"
     case partTime = "PART_TIME"
 }
-
-enum EmployeeResponseError: Error {
-    case decode
-    case fetch
-    case invalidUrl
-    case unknown
-}

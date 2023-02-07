@@ -9,14 +9,15 @@ import SwiftUI
 import Kingfisher
 
 struct ImageView: View {
-    var photoUrl: String?
+    var photoUrl: String? /// URL to load
+    var assetPhotoName: String /// Asset string to be placeholder or image to display if no photoURL is given
     var size: Double
     
-    var placeholderImage: some View {
-        Image("PlaceholderImage")
+    var assetImage: some View {
+        Image(assetPhotoName)
             .resizable()
             .aspectRatio(1, contentMode: .fit)
-            .frame(width: size, height: size)
+            .frame(width: size, height: size, alignment: .center)
     }
     
     var body: some View {
@@ -24,15 +25,15 @@ struct ImageView: View {
             if let photoUrl = photoUrl, let url = URL(string: photoUrl){
                 KFImage(url)
                     .placeholder {
-                        placeholderImage
+                        assetImage
                     }
                     .resizable()
                     .scaledToFill()
-                    .frame(width: size, height: size)
+                    .frame(width: size, height: size, alignment: .center)
                     .clipped()
             }
             else {
-                placeholderImage
+                assetImage
             }
         }
     }
@@ -40,6 +41,6 @@ struct ImageView: View {
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView(photoUrl: "", size: 10.0)
+        ImageView(photoUrl: "", assetPhotoName: "PlaceholderImage", size: 10.0)
     }
 }
