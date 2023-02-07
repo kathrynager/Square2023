@@ -12,6 +12,7 @@ class PersistanceManger {
     struct Constants {
         static let employeeFile = "employeeData.txt"
     }
+    
     private let logger = Logger()
     
     init(){}

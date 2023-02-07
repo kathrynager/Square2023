@@ -47,8 +47,8 @@ class EmployeeService: EmployeeServiceProtocol {
                 response = try await fetch(endpoint: Constants.employeeEndpoint)
             }
 
-            // Check if response is diff and save
-            if didReadCache == false && previousResponse != response {
+            // Check if response is diff and has values and save
+            if didReadCache == false && previousResponse != response && !response.employees.isEmpty {
                 persistanceManger.save(employees: response)
                 didReadCache = false
             }
